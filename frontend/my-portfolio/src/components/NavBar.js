@@ -44,8 +44,8 @@ export const NavBar = () => {
                     <span className="navbar-text ms-auto">
                         <div className="social-icon">
                             <a href="LinkedIn"><img src={navIcon1} alt="" /></a>
-                            <a href="Facebook"><img src={navIcon2} alt="" /></a>
-                            <a href="Instagram"><img src={navIcon3} alt="" /></a>
+                            <a href="https://web.facebook.com/profile.php?id=100006387900157"><img src={navIcon2} alt="" /></a>
+                            <a href="https://www.instagram.com/gachiengunyi/"><img src={navIcon3} alt="" /></a>
                         </div>
                         <button className="vvd" onClick={() => console.log('connect')}><span>Let's Connect</span></button>
                     </span>
