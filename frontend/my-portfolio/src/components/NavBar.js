@@ -5,7 +5,7 @@ import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
 import anto3 from '../assets/img/anto3.png';
-import resume from '../assets/resume-sample.pdf'; 
+import resume from '../assets/resume.pdf'; 
 
 export const NavBar = () => {
     const [activeLink, setActiveLink] = useState('home');
@@ -51,11 +51,11 @@ export const NavBar = () => {
                     </Nav>
                     <span className="navbar-text ms-auto">
                         <div className="social-icon">
-                            <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer"><img src={navIcon1} alt="LinkedIn" /></a>
+                            <a href="www.linkedin.com/in/anthony-gachie-18b7292b8" target="_blank" rel="noopener noreferrer"><img src={navIcon1} alt="LinkedIn" /></a>
                             <a href="https://web.facebook.com/profile.php?id=100006387900157" target="_blank" rel="noopener noreferrer"><img src={navIcon2} alt="Facebook" /></a>
                             <a href="https://www.instagram.com/gachiengunyi/" target="_blank" rel="noopener noreferrer"><img src={navIcon3} alt="Instagram" /></a>
                         </div>
-                        <button className="vvd" onClick={handleDownloadResume}><span>Download My Resume</span></button>
+                        <button className="vvd" onClick={handleDownloadResume}><span>Check out My Resume</span></button>
                     </span>
                 </Navbar.Collapse>
             </Container>

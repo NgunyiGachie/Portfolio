@@ -1,17 +1,17 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import apiSnippet from "../assets/img/api-snippet.png";
+import apiSnippet from "../assets/img/api-snippet.png"; // Replace with an appropriate image for EduBridge
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
 export const Projects = () => {
-
   const projects = [
     {
-      title: "Recipe App APIs",
-      description: "API Design & Development",
-      imgUrl: apiSnippet,
+      title: "EduBridge",
+      description: "An Online Classroom platform for seamless learning experiences.",
+      imgUrl: apiSnippet, // Update this with the appropriate image for EduBridge
+      projectLink: 'https://github.com/NgunyiGachie/EduBridge', // GitHub link for EduBridge
     }  
   ];
 

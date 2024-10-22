@@ -1,15 +1,15 @@
-import { Col } from "react-bootstrap";
+import React from "react";
 
-export const ProjectCard = ({ title, description, imgUrl }) => {
+export const ProjectCard = ({ title, description, imgUrl, projectLink }) => {
   return (
-    <Col size={12} sm={6} md={4}>
-      <div className="proj-imgbx">
-        <img src={imgUrl} />
-        <div className="proj-txtx">
-          <h4>{title}</h4>
-          <span>{description}</span>
-        </div>
-      </div>
-    </Col>
-  )
-}
+    <div className="project-card">
+      <img src={imgUrl} alt={title} />
+      <h3>
+        <a href={projectLink} target="_blank" rel="noopener noreferrer">
+          {title}
+        </a>
+      </h3>
+      <p>{description}</p>
+    </div>
+  );
+};
