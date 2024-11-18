@@ -5,7 +5,7 @@ import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
 import anto3 from '../assets/img/anto3.png';
-import resume from '../assets/resume.pdf'; 
+import resume from '../assets/Resume.pdf';
 
 export const NavBar = () => {
     const [activeLink, setActiveLink] = useState('home');
@@ -30,7 +30,7 @@ export const NavBar = () => {
     const handleDownloadResume = () => {
         const link = document.createElement('a');
         link.href = resume;
-        link.download = 'resume.pdf'; 
+        link.download = 'resume.pdf';
         link.click();
     }
 
