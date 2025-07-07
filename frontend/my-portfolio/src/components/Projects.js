@@ -1,6 +1,6 @@
-import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import apiSnippet from "../assets/img/api-snippet.png"; // Replace with an appropriate image for EduBridge
+import apiSnippet from "../assets/img/api-snippet.png"; // Replace with an actual screenshot of your dashboard
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -8,11 +8,12 @@ import TrackVisibility from 'react-on-screen';
 export const Projects = () => {
   const projects = [
     {
-      title: "EduBridge",
-      description: "An Online Classroom platform for seamless learning experiences.",
-      imgUrl: apiSnippet, // Update this with the appropriate image for EduBridge
-      projectLink: 'https://github.com/NgunyiGachie/EduBridge', // GitHub link for EduBridge
-    }
+      title: "EC2 Cost Optimization Dashboard",
+      description: "An interactive dashboard that analyzes resource utilization, network throughput, and cost-efficiency of an Amazon EC2 instance using real CloudWatch metrics. Built for FinOps insights within AWS Free Tier.",
+      imgUrl: apiSnippet,
+      projectLink: "https://github.com/NgunyiGachie/ec2-cost-optimization-dashboard",
+    },
+    // You can add more projects here
   ];
 
   return (
@@ -22,50 +23,26 @@ export const Projects = () => {
           <Col size={12}>
             <TrackVisibility>
               {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
-                <h2>Projects</h2>
-                <p>Explore my recent projects showcasing my skills and experience. Each project highlights my expertise in various areas, including API development, backend solutions, and more. Check out the details below to see how I tackle real-world challenges through code.</p>
-                <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                  <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
-                    <Nav.Item>
-                      <Nav.Link eventKey="first">All Projects</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="second">Web Development</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="third">Backend Solutions</Nav.Link>
-                    </Nav.Item>
-                  </Nav>
-                  <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
-                    <Tab.Pane eventKey="first">
-                      <Row>
-                        {
-                          projects.map((project, index) => {
-                            return (
-                              <ProjectCard
-                                key={index}
-                                {...project}
-                              />
-                            )
-                          })
-                        }
-                      </Row>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="second">
-                      <p>In this section, you'll find projects related to web development. These include various frontend and backend technologies that I’ve worked on to build responsive and dynamic web applications.</p>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="third">
-                      <p>This section highlights my work on backend solutions. It covers API development, database management, and server-side programming to ensure robust and scalable backend architectures.</p>
-                    </Tab.Pane>
-                  </Tab.Content>
-                </Tab.Container>
-              </div>}
+                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                  <h2>Projects</h2>
+                  <p>
+                    Explore selected projects where I merge cloud infrastructure expertise with economic insights.
+                    These works reflect my FinOps practice — measuring usage, uncovering inefficiencies, and optimizing cloud spend with data.
+                  </p>
+                  <Row>
+                    {projects.map((project, index) => (
+                      <Col key={index} xs={12} sm={6} md={4} className="mb-4">
+                        <ProjectCard {...project} />
+                      </Col>
+                    ))}
+                  </Row>
+                </div>
+              }
             </TrackVisibility>
           </Col>
         </Row>
       </Container>
       <img className="background-image-right" src={colorSharp2} alt="Background decoration" />
     </section>
-  )
-}
+  );
+};
