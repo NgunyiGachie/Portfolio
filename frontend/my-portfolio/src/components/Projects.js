@@ -12,7 +12,7 @@ export const Projects = () => {
       description: "An Online Classroom platform for seamless learning experiences.",
       imgUrl: apiSnippet, // Update this with the appropriate image for EduBridge
       projectLink: 'https://github.com/NgunyiGachie/EduBridge', // GitHub link for EduBridge
-    }  
+    }
   ];
 
   return (

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../assets/img/header-img.svg";
+import headerImg from "../assets/img/header-img.svg"; // Replace with a more cloud-themed image if you prefer
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -10,7 +10,7 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Backend Developer", "API Developer", "Database Administrator", "Software Engineer" ];
+  const toRotate = [ "FinOps Analyst", "Cloud Economist", "AWS Practitioner", "Cost Optimization Engineer" ];
   const period = 2000;
 
   useEffect(() => {
@@ -19,7 +19,7 @@ export const Banner = () => {
     }, delta);
 
     return () => { clearInterval(ticker) };
-  }, [text])
+  }, [text]);
 
   const tick = () => {
     let i = loopNum % toRotate.length;
@@ -44,7 +44,7 @@ export const Banner = () => {
     } else {
       setIndex(prevIndex => prevIndex + 1);
     }
-  }
+  };
 
   return (
     <section className="banner" id="home">
@@ -53,23 +53,27 @@ export const Banner = () => {
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
               {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <span className="tagline">Welcome to my Portfolio</span>
-                <h1>{`Hi! I'm Anthony`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Backend Developer", "API Developer", "Database Administrator", "Software Engineer" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>I am a passionate backend software engineer with a solid foundation in backend development and a growing expertise in crafting scalable solutions. My focus is on building efficient, high-performance systems that contribute to impactful and innovative projects. Explore my portfolio to see how my skills can bring value to your next project.</p>
-              </div>}
+                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                  <span className="tagline">Welcome to my Portfolio</span>
+                  <h1>{`Hi! I'm Anthony`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "FinOps Analyst", "Cloud Economist", "AWS Practitioner", "Cost Optimization Engineer" ]'><span className="wrap">{text}</span></span></h1>
+                  <p>
+                    I'm a FinOps practitioner with a background in Economics, passionate about bridging the gap between cloud infrastructure and financial accountability. With strong technical skills in Python and AWS, I specialize in analyzing usage data, identifying inefficiencies, and building tools that make cloud costs visible, actionable, and optimized.
+                  </p>
+                </div>
+              }
             </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5}>
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                  <img src={headerImg} alt="Header Img"/>
-                </div>}
+                  <img src={headerImg} alt="Header" />
+                </div>
+              }
             </TrackVisibility>
           </Col>
         </Row>
       </Container>
     </section>
-  )
-}
+  );
+};

@@ -35,47 +35,47 @@ export const Skills = () => {
                     <div className="skill-bx wow zoomIn">
                         <h2>Skills</h2>
                         <p>
-                          I am skilled in creating and managing web applications with a strong focus on backend development, database management, and API integration. My expertise also includes deploying applications to the cloud and ensuring security best practices are followed.
+                          As a FinOps-focused cloud practitioner with a background in Economics, I specialize in aligning technical execution with financial efficiency. My skill set blends cloud cost analysis with AWS-native tooling, data-driven forecasting, and cost optimization strategy.
                         </p>
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
-                                <img src={meter1} alt="Backend Development" />
-                                <h5>Backend Development</h5>
+                                <img src={meter1} alt="AWS Cost Analysis" />
+                                <h5>AWS Cost Analysis</h5>
                             </div>
                             <div className="item">
-                                <img src={meter2} alt="Web Development" />
-                                <h5>Web Development</h5>
+                                <img src={meter2} alt="FinOps Strategy" />
+                                <h5>FinOps Strategy</h5>
                             </div>
                             <div className="item">
-                                <img src={meter3} alt="Database Management" />
-                                <h5>Database Management</h5>
+                                <img src={meter3} alt="Cloud Monitoring" />
+                                <h5>Cloud Monitoring (CloudWatch)</h5>
                             </div>
                             <div className="item">
-                                <img src={meter1} alt="API Development" />
-                                <h5>API Development</h5>
+                                <img src={meter1} alt="Python Scripting" />
+                                <h5>Python Scripting</h5>
                             </div>
                             <div className="item">
-                                <img src={meter2} alt="Cloud Deployment" />
-                                <h5>Cloud Deployment</h5>
+                                <img src={meter2} alt="Infra Optimization" />
+                                <h5>Infrastructure Optimization</h5>
                             </div>
                             <div className="item">
-                                <img src={meter3} alt="Security Best Practices" />
-                                <h5>Security Best Practices</h5>
+                                <img src={meter3} alt="Data Visualization" />
+                                <h5>Data Visualization (Dash)</h5>
                             </div>
                             <div className="item">
-                                <img src={meter1} alt="Performance Optimization" />
-                                <h5>Performance Optimization</h5>
+                                <img src={meter1} alt="Forecasting & Budgeting" />
+                                <h5>Budgeting & Forecasting</h5>
                             </div>
                             <div className="item">
-                                <img src={meter2} alt="Version Control" />
-                                <h5>Version Control</h5>
+                                <img src={meter2} alt="Cost-Aware Architecture" />
+                                <h5>Cost-Aware Architecture</h5>
                             </div>
                         </Carousel>
                     </div>
                 </div>
             </div>
         </div>
-        <img className="background-image-left" src={colorSharp} alt="Background Image" />
+        <img className="background-image-left" src={colorSharp} alt="Background" />
     </section>
   );
 }
