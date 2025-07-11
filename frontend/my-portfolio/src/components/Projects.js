@@ -1,6 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import apiSnippet from "../assets/img/api-snippet.png"; // Replace with an actual screenshot of your dashboard
+import apiSnippet from "../assets/img/api-snippet.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -11,9 +11,9 @@ export const Projects = () => {
       title: "EC2 Cost Optimization Dashboard",
       description: "An interactive dashboard that analyzes resource utilization, network throughput, and cost-efficiency of an Amazon EC2 instance using real CloudWatch metrics. Built for FinOps insights within AWS Free Tier.",
       imgUrl: apiSnippet,
-      projectLink: "https://github.com/NgunyiGachie/ec2-cost-optimization-dashboard",
+      projectLink: "https://ec2-cost-optimization-dashboard-5.onrender.com/",
     },
-    // You can add more projects here
+    // add more projects here
   ];
 
   return (
